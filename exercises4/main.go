@@ -96,7 +96,7 @@ func main() {
 	fmt.Println("itoa:", str2)
 
 	// 把一个字符串转成整数
-	number, err := strconv.Atoi("abc")
+	number, err := strconv.Atoi(str2)
 	if err != nil {
 		fmt.Println("can not convert to int,", err)
 		return
