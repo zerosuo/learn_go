@@ -42,7 +42,7 @@ func main() {
 	fmt.Println(url)
 	fmt.Println(path)
 
-	// 转化字符串
+	// 替换字符串
 	str := "   hello world abc \n"
 	result := strings.Replace(str, "world", "you", 1)
 	fmt.Println("replace:", result)
@@ -51,46 +51,51 @@ func main() {
 	count := strings.Count(str, "l")
 	fmt.Println("count:", count)
 
-	// 查找出现三次的字符
+	// 重复三次字符串
 	result = strings.Repeat(str, 3)
 	fmt.Println("repeat:", result)
 
-	//
+	// 全转小写
 	result = strings.ToLower(str)
 	fmt.Println("lower:", result)
 
-	//
+	// 全转大写
 	result = strings.ToUpper(str)
 	fmt.Println("upper", result)
 
-	//
+	// 去掉首尾字符
 	result = strings.TrimSpace(str)
 	fmt.Println("trimSpace:", result)
 
-	//
+	// 去掉字符串首尾cut字符
 	result = strings.Trim(str, "\n\r")
 	fmt.Println("trim:", result)
 
-	//
+	// 去掉尾cut字符
 	result = strings.TrimLeft(str, "\n\r")
 	fmt.Println("trimLeft:", result)
 
+	// 返回字符以空格的切片
 	splitResult := strings.Fields(str)
 	for i := 0; i < len(splitResult); i++ {
 		fmt.Println(splitResult[i])
 	}
 
+	//返回split切割的字符串
 	splitResult = strings.Split(str, "l")
 	for i := 0; i < len(splitResult); i++ {
 		fmt.Println(splitResult[i])
 	}
 
+	//用l把所有字符串链接起来
 	str2 := strings.Join(splitResult, "l")
 	fmt.Println("join:", str2)
 
+	//把整数i转为字符串
 	str2 = strconv.Itoa(1000)
 	fmt.Println("itoa:", str2)
 
+	// 把一个字符串转成整数
 	number, err := strconv.Atoi("abc")
 	if err != nil {
 		fmt.Println("can not convert to int,", err)
